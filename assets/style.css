@@ -1,0 +1,279 @@
+/* ============ google fonts ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* ============ variables ================= */
+:root{
+    --header-height: 3.5rem;
+
+    /* ============ colors ================= */
+    --first-color: #4571ec;
+    --second-color: rgb(55, 161, 55);
+    --first-color-alt: #3355b1;
+    --first-color-send: #7694e7;
+    --title-color: #161212;
+    --text-color: #5B5757;
+    --text-color-light: #8F8A8A;
+    --body-color: #ffffff;
+    --container-color: #FFF;
+
+    /* ============ fonts ================= */
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+
+    /* ============ font weight ================= */
+    --font-semi-bold: 550;
+    --font-bold: 700;
+
+    /* ============ margenes ================= */
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+
+    /* ============ z-index ================= */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+}
+
+@media screen and (min-width: 968px){
+    :root{
+      --biggest-font-size: 3rem;
+      --h2-font-size: 1.75rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+    }
+}
+
+/* ============= base ============== */
+
+*::before,::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ============ variables dark theme ======== */
+
+/* =============button dark/liht=========== */
+
+body{
+    margin: var(--header-height)0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+h1,h2,h3,ul,p{
+    margin: 0;
+}
+
+h1,h2,h3{
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--title-color);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ======== class css =========== */
+.section{
+    padding: 4rem 0 2rem;
+}
+
+.section-title, .section-title-center{
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    text-align: center;
+    margin-bottom: var(--mb-3);
+}
+
+/* =========== layout ================ */
+.main{
+    overflow: hidden;
+}
+
+.bd-container{
+    max-width: 968px;
+    width: calc(100% - 3rem);
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+}
+
+.bd-grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+}
+
+/* ============== nav =================== */
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px){
+    .nav__menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        width: 40%;
+        margin: 0 auto;
+        padding: 1rem 0 0;
+        margin-top: var(--mb-3);
+        text-align: center;
+        background-color: var(--body-color);
+        transition: 0.4s;
+        /* box-shadow: 0 0 1px rgb(138, 138, 138); */
+        border-radius: 0.7rem;
+        z-index: var(--z-fixed);
+    }
+}
+
+.nav__item{
+    margin-bottom: var(--mb-2);
+}
+
+.nav__link, .nav__logo, .nav__toggle{
+    color: var(--title-color);
+}
+
+.nav__link:hover, .nav__toggle:hover{
+    color: var(--first-color-alt);
+    font-weight: var(--font-semi-bold);
+}
+
+.nav__link{
+    transition: .3s;
+}
+
+.nav__toggle{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.nav__toggle:active{
+    transform: rotate(360deg);
+    transition: .6s;
+}
+
+/* =========== show menu ============== */
+.show-menu{
+    top: 0;
+}
+
+/* ============ scroll top ============ */
+/* .scrolltop{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    border-radius: .6rem;
+    z-index: var(--z-tooltip);
+    transition: .4rem;
+    visibility: hidden;
+}
+
+.scrolltop:hover{
+    background-color: var(--first-color-alt);
+    color: var(--body-color);
+}
+
+.scrolltop__icon{
+   font-size: 1.5rem; 
+   color: var(--body-color);
+}
+.show-scroll{
+    visibility: visible;
+    bottom: 1.5rem;
+} */
+
+/* =========== home ============== */
+.home__container{
+    row-gap: .5rem;
+    margin-left: var(--mb-3);
+}
+
+.home__img{
+    margin-top:var(--mb-5);
+    margin-bottom:var(--mb-5);
+    width: 300px;
+    justify-self: center;
+}
+
+.home__title{
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--mb-2);
+}
+
+.home__description{
+    margin-bottom: var(--mb-3);
+}
+
+/* =========== buttons ================= */
+.button{
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--body-color);
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    font-weight: var(--font-semi-bold);
+    transition: .3s;
+}
+
+.button:hover{
+    background-color: var(--body-color);
+    color: var(--first-color);
+}
+
+/* ============= about ============ */
+.about__data{
+    text-align: center;
+}
+
+.about__description{
+    margin-bottom: var(--mb-2);
+}
+
+.section-title-center{
+    margin-top: var(--mb-2);
+}
+
